@@ -13,4 +13,4 @@ What is a RESTful Web Services?
 web services which is based on REST architecture are known as RESTful web services.
 RESTful web services uses http methods to implement the concepts of REST architecture.
 Its usually defines an URI(uniform resource interface) a service, 
-which provides resource representationsuch as JSON and set of HTTP Methods.
+which provides resource representation such as JSON and set of HTTP Methods.
