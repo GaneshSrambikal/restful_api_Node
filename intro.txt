@@ -1,0 +1,16 @@
+What is REST architecture?
+REST stands for Representational State Transfer.
+It is a web standards based architecture and uses http protocol.
+Here every component is resource and resource can be accessed by 
+common interface using HTTP standard methods.
+REST server provides access to resources
+REST client acesses and modifies the resources using HTTP protocol.
+In REST each resource is identified by URIS/ global IDs.
+It uses different representation to represent resources like
+JSON,xml etc.
+
+What is a RESTful Web Services?
+web services which is based on REST architecture are known as RESTful web services.
+RESTful web services uses http methods to implement the concepts of REST architecture.
+Its usually defines an URI(uniform resource interface) a service, 
+which provides resource representationsuch as JSON and set of HTTP Methods.
