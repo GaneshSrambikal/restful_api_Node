@@ -16,11 +16,5 @@
         "password": "password3",
         "profession": "clerk",
         "id": 3
-    },
-    "user4": {
-        "name": "trump",
-        "password": "thewall",
-        "profession": "president",
-        "id": 4
     }
 }

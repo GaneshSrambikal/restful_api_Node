@@ -10,7 +10,16 @@ app.delete('/:id', function (req, res) {
             let users = JSON.parse(data);
             delete users["user" + req.params.id];
             console.log("user" + req.params.id + " Deleted. " + JSON.stringify(users));
-            res.end("user" + req.params.id + " Deleted. \n" + JSON.stringify(users));
+
+            let store = JSON.stringify(users);
+            fs.writeFile(__dirname + "/" + "users.json", store, function (err) {
+                if (err) {
+                    console.log(err.stack)
+                } else {
+                    console.log("DB is updated.");
+                    res.end("user" + req.params.id + " Deleted. \n DB is updated.\n " + JSON.stringify(users));
+                }
+            });
         }
     });
 });
