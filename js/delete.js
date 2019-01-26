@@ -9,7 +9,7 @@ app.delete('/:id', function (req, res) {
         } else {
             let users = JSON.parse(data);
             delete users["user" + req.params.id];
-            console.log("user" + req.params.id + " Deleted. " + JSON.stringify(users));
+            console.log("user" + req.params.id + " Deleted. " + JSON.stringify(users, null, 2));
 
             let store = JSON.stringify(users);
             fs.writeFile(__dirname + "/" + "users.json", store, function (err) {
@@ -17,7 +17,7 @@ app.delete('/:id', function (req, res) {
                     console.log(err.stack)
                 } else {
                     console.log("DB is updated.");
-                    res.end("user" + req.params.id + " Deleted. \n DB is updated.\n " + JSON.stringify(users));
+                    res.end("user" + req.params.id + " Deleted. \n DB is updated.\n " + JSON.stringify(users, null, 2));
                 }
             });
         }

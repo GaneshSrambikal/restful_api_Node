@@ -18,7 +18,7 @@ app.post('/updateuser', function (req, res) {
         } else {
             data = JSON.parse(data);
             data["user4"] = user["user4"];
-            let store = JSON.stringify(data); //should be string because ,currently its an object / JSON format
+            let store = JSON.stringify(data, null, 2); //should be string because ,currently its an object / JSON format
             //write the data to the file users,json
             fs.writeFile(__dirname + "/" + "users.json", store, function (err) {
                 if (err) {

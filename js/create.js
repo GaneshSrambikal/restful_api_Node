@@ -20,7 +20,7 @@ app.post('/adduser', function (req, res) {
             data = JSON.parse(data);
             data["user4"] = user["user4"]; //assigning user4 in data 
             console.log(data);
-            res.end(JSON.stringify(data));
+            res.end(JSON.stringify(data, null, 2));
         }
     });
 });

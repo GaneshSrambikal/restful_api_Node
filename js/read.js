@@ -26,7 +26,7 @@ app.get('/:id', function (req, res) {
                 res.send("No such records.");
             } else {
                 let result = users["user" + req.params.id]; //get the specfied user detail
-                console.log(JSON.stringify(result))
+                console.log(JSON.stringify(result, null, 2))
                 res.send(result);
             }
         }
