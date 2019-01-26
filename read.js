@@ -9,13 +9,13 @@ app.get('/listUsers', function (req, res) {
     fs.readFile(__dirname + "/" + "users.json", 'utf8', function (err, data) {
         if (err) { console.log(err.stack); }
         else {//log all the dat in the file
-            console.log(data);
+            console.log(JSON.parse(data));
             res.end(data);
         }
     })
 })
 
-//api request show the specified user from user.json
+// api request show the specified user from user.json
 app.get('/:id', function (req, res) {
     fs.readFile(__dirname + "/" + "users.json", 'utf8', function (err, data) {
         if (err) { console.log(err) }
@@ -30,8 +30,8 @@ app.get('/:id', function (req, res) {
                 res.send(result);
             }
         }
-    })
-})
+    });
+});
 
 //start a server
 app.listen(8081, function () {
